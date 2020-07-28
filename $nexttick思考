@@ -1,0 +1,7 @@
+$nextTick 操作更新之后的dom。回调函数会在更新之后执行操作，然后再进行dom更新操作
+注意：
+场景1：父组件中拿到数据之后，在父组件中$nextTick中对子组件的高度进行操作会出现错误。应该在子组件中的$nextTick中进行操作
+场景2：A页面跳转到B页面。在A页面中sessionStorage中存放数据。B页面中created或者mouted中获取数据会出现问题。$nextTick中也不行。获取方法是在setTimeout中获取数据或者路由跳转的时候限制跳转时间100ms之后跳转
+
+
+
